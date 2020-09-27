@@ -1,0 +1,325 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing:border-box ;
+	-o-box-sizing:border-box ;
+	-box-sizing:border-box ;
+}
+
+body{
+    background: #FFFFFF;;
+    font-family: Arial;    
+}
+
+.contenedor{
+	
+	width: 100%;
+	max-width: 1000px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;/*Se coloca ésta propiedad para que el header pueda cumplir el width de 100%
+	y no ubicarse con los demás elementos en forma de fila como lo pide la propiedad anterior, de flex-direction*/
+}
+
+header{
+   
+    width: 100%;
+    height: 560px;    
+    
+    background: linear-gradient(90deg, #C84E89 0%, #F15F79 100%);
+    box-shadow: 0px 1px 0px #E7E8F2;
+
+    display: flex;
+    flex-direction: column;
+    /*flex-wrap: wrap;*/
+    justify-content: space-around;
+    align-content: flex-start;
+
+}
+
+.box2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+
+}
+
+@font-face {
+    font-family: get_schwifty__a_rick_and_morty_font_by_jonizaak-dajw4u8;
+    src: url('../src/assets/fonts/get_schwifty__a_rick_and_morty_font_by_jonizaak-dajw4u8.ttf');
+  }
+
+.titulorickandmorty{
+    font-family: get_schwifty__a_rick_and_morty_font_by_jonizaak-dajw4u8;
+    color: #FFF9FE;
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+.opcrickandmorty{
+    font-family: get_schwifty__a_rick_and_morty_font_by_jonizaak-dajw4u8;
+    color: #FFF9FE;
+    font-size: 25px;
+    font-weight: bold;
+    padding-right: 110px;
+    padding-top: -10px;
+    text-decoration: underline;
+}
+
+.opcrickandmorty a:hover{   
+        text-decoration: underline;
+}
+
+
+.box3{
+    padding-left: 67%;
+}
+
+.main{
+
+    
+    width: 1340px;
+    height: 1465px;
+    left: 0px;
+    top: 0px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+
+}
+
+nav{
+    width: 500px;
+    height: 100px;
+    padding-left: 50px;
+
+}
+
+.filtrobox{
+    width: 314px;
+    height: 17px;    
+    padding-top: 20px;
+}
+
+.titulofiltro{     
+    font-family: 'Play', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    /* negro */    
+    color: #404040;
+}
+
+.imgtitulo{
+    width: 100px;
+    height: 17px;
+    padding-left: 250px;
+}
+
+.tarjeta{
+
+width: 600px;
+height: 300px;
+background: #F6F6F6;
+border-radius: 10px;
+box-shadow: 0 5px 10px rgba(0,0,0,.5)
+}
+
+.imagen{
+    border-radius: 10px 0px 0px 10px;
+}
+
+.tituloPersonaje{
+    font-family: 'Play', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #404040;
+}
+
+.descripcion{    
+    padding-top: 20px;
+    padding-left: 15px;  
+
+}
+
+.linea{
+    width: 258px;
+    height: 2px;
+    background-color: #C84E89;
+}
+
+.linea2{
+    width: 258px;
+    height: 2px;
+    background-color: #C84E89;
+}
+
+.atributo1{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #404040;
+}
+
+.atributo2{
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+color: #807E7E;
+padding-left: 15px;
+
+}
+
+.boton{
+
+    width: 148px;
+    height: 39px;
+    border-radius: 5px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    /* gradeinte */
+
+    background: linear-gradient(90deg, #C84E89 0%, #F15F79 100%);
+
+    /* blanco */
+
+    color: #FFFFFF;
+}
+
+.boxbutton{
+    padding-left: 15px;
+    padding-top: 100px;
+}
+
+footer{
+    display: none;
+   
+}
+
+@media screen and (max-width: 800px){
+
+    header{
+        width: 100%;
+        height: 68px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: center;
+        overflow: hidden;
+        /*aqui esta el cambio*/
+        position: fixed;       
+        top: 0;
+        left: 0;
+        z-index: 1;
+        /*fin del cambio*/
+    }    
+    
+
+    .box2{
+        display: none;
+    }
+
+    .box3{
+        display: none;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 80px;
+    }
+
+    .titulofiltro{
+        font-size: 20px;
+        padding-left: 25px;
+    }
+
+    .linea{
+        width: 400px;
+        height: 0.1px;
+        padding-left: -25px;
+        
+    }
+   
+	.main{
+        width: 75%;
+        padding-left: 6%;
+    }
+    .imagen{
+        width: 83%;
+    }
+
+    .linea2{
+        width: 190px;
+        height: 0.1px;
+        background-color: #C84E89;
+    }
+
+    .tarjeta{
+        height: 205px;
+    }
+
+    .boxbutton{
+        padding-top: 5px;
+        padding-left: 0px;
+    }
+
+    .boton{
+        background: none;
+        color: #F15F79; 
+    }
+    .descripcion{
+        padding-left: 0px;
+    }
+
+    footer{    
+        width: 100%;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-content: center;     
+        overflow: hidden;
+        /*aqui esta el cambio*/
+        position: fixed;       
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        /*fin del cambio*/
+        background: linear-gradient(90deg, #C84E89 0%, #F15F79 100%);
+        border-radius: 5px;
+    }
+
+    .box4{
+        padding-left: 15%;
+    }
+
+    .opcrickandmorty{
+        padding-right: 75px;
+    }
+
+}

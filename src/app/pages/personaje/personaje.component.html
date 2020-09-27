@@ -1,0 +1,42 @@
+<div class="tarjetaDetalle">
+    <div class="row">
+        <div class=" imagen col-6">            
+                <img class="imagenfoto" [src]="personaje.image" alt="">
+                <div>
+                    <h3 class="especie">Especie:</h3>
+                    <p class="especie2"> {{personaje.species}}</p>    
+                </div>
+                <div>
+                    <h3 class="especie">Estado:</h3>
+                    <p class="especie2">{{personaje.status}}</p>    
+                </div>            
+        </div>
+        <div class="col-6">
+            <div class="descripcion">
+                <h3 class="tituloPersonaje">{{personaje.name}}</h3>
+                <hr class="linea">
+                <p class="parrafo">{{personaje.location.name}}</p>
+                <div class="row">                    
+                        <h5 class="atributo">Género:</h5>
+                        <h5 class="valor">{{personaje.gender}}</h5>
+                </div>
+                <div class="row">                    
+                    <h5 class="atributo">Origen:</h5>
+                    <h5 class="valor">{{personaje.origin.name}}</h5>
+                </div>
+                <div class="row">                    
+                    <h5 class="atributo">Tipo:</h5>
+                    <h5 class="valor">{{personaje.type}}</h5>
+                </div>
+                <div class="row">                    
+                    <h5 class="atributo">Creado:</h5>
+                    <h5 class="valor">{{personaje.created}}</h5>
+                </div>
+                <div class="row mt-5">               
+                    <button routerLink="/personajes" 
+                    class="btn botonVolver">Volver</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
