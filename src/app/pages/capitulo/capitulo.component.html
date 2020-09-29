@@ -35,26 +35,26 @@
         <hr class="linea">
     </div>   
 </nav>
-<section *ngIf= "!cargando && personajes.length > 0" class="main">  
-    <div *ngFor= "let personaje of personajes; let i = index " class="tarjeta mb-5 animated fadeIn slowest">
+<section *ngIf= "!cargando && capitulos.length > 0" class="main">  
+    <div *ngFor= "let capitulo of capitulos; let i = index " class="tarjeta mb-5 animated fadeIn slowest">
         <div class="row">
             <div class="col-6">
                 <div>
-                    <img class="imagen" [src]="personaje.image" alt="">
+                    <img class="imagen" [src]="capitulo.character.image" alt="">
                 </div>
             </div>
             <div class="col-6">
                 <div class="descripcion">
-                    <h3 class="tituloPersonaje">{{personaje.name}}</h3>
+                    <h3 class="tituloPersonaje">{{capitulo.name}}</h3>
                     <hr class="linea2">
-                    <p class="atributo1">{{personaje.origin.name}}</p>
+                    <p class="atributo1">{{capitulo.episode}}</p>
                     <div class="row">
-                        <label class="atributo2">Especie:</label>
-                        <label class="atributo2">{{personaje.species}}</label>
+                        <label class="atributo2">Salio al aire:</label>
+                        <label class="atributo2">{{capitulo.air_date}}</label>
                     </div>                    
                 </div>
                 <div class="boxbutton">
-                    <button [routerLink]="['/personaje', personaje.id]" 
+                    <button [routerLink]="['/capitulo', capitulo.id]" 
                     class="btn boton">Ver detalles</button>
                 </div>
             </div>
@@ -73,7 +73,7 @@
 </footer> 
 
 
-<div *ngIf="!cargando && personajes.length === 0" 
+<div *ngIf="!cargando && capitulos.length === 0" 
     class="alert alert-warning text-center mt-3 animated fadeIn slow">
     <h4 class="alert-heading">No hay registros</h4>
     <p>

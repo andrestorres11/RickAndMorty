@@ -7,12 +7,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { PersonajeComponent } from './pages/personaje/personaje.component';
 import { PersonajesComponent } from './pages/personajes/personajes.component';
+import { CapituloComponent } from './pages/capitulo/capitulo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonajeComponent,
-    PersonajesComponent
+    PersonajesComponent,
+    CapituloComponent
   ],
   imports: [
     BrowserModule,

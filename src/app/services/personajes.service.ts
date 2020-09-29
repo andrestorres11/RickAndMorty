@@ -2,22 +2,21 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { PersonajeModel } from '../models/personaje.model';
 import { map, delay } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PersonajesService {
 
-  private url = 'https://rickandmortyapi.com/api';
-
   constructor( private http: HttpClient) { }
 
   obtenerPersonaje( id:string ){
-    return this.http.get(`${ this.url }/character/${ id }`);
+    return this.http.get(`${ environment.rickandmortyapi }/character/${ id }`);
   }
 
   obtenerPersonajes(){
-    return this.http.get(`${ this.url }/character`)
+    return this.http.get(`${ environment.rickandmortyapi }/character`)
     .pipe(
       map( resp => this.crearArreglo( resp )),
       delay(1500)
