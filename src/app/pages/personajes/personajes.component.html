@@ -23,6 +23,7 @@
 <nav>
     <div class="row">
         <div class="filtrobox">
+            <input type="text" class="form-control" #name (change)="saverange(name.value)" name="name">
             <h3 class="titulofiltro">Filtrar y ordenar</h3>
         </div>
         <div class="imgtitulo">
