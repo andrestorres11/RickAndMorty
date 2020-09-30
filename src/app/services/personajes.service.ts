@@ -23,6 +23,15 @@ export class PersonajesService {
     );
   }
 
+  filterCharacters(name:string){
+    return this.http.get(`${ this.url }/character?name=${ name }`)
+    .pipe(
+      map( resp => this.crearArreglo( resp )),
+      delay(1500)
+  
+    );
+  }
+
   private crearArreglo( personajesObj: object ){
     
     const personajes : any[] = [];
@@ -38,4 +47,5 @@ export class PersonajesService {
 
     return personajes;
   }
+  
 }

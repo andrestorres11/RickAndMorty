@@ -27,4 +27,18 @@ export class PersonajesComponent implements OnInit {
     });
   }
 
+  saverange(personaje){
+
+    this.cargando = true;
+
+    this.personajesService.filterCharacters(personaje)
+    .subscribe( resp => {
+      this.personajes = resp[1];
+      this.cargando = false;
+     
+    });
+    
+
+  }
+
 }
