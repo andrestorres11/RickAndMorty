@@ -24,7 +24,7 @@ export class PersonajesService {
   }
 
   filterCharacters(name:string){
-    return this.http.get(`${ this.url }/character?name=${ name }`)
+    return this.http.get(`${ environment.rickandmortyapi }/character?name=${ name }`)
     .pipe(
       map( resp => this.crearArreglo( resp )),
       delay(1500)
